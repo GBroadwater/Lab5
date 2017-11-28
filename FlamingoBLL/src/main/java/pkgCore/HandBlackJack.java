@@ -3,6 +3,8 @@ package pkgCore;
 import java.util.Collections;
 import java.util.LinkedList;
 
+import pkgEnum.eBlackJackResult;
+
 public class HandBlackJack extends Hand  {
 
 
@@ -66,7 +68,7 @@ public class HandBlackJack extends Hand  {
 	}
 
 	@Override
-	public void setbWinner(boolean bWinner) {
+	public void setbWinner(eBlackJackResult bWinner) {
 		super.setbWinner(bWinner);
 	}
 	

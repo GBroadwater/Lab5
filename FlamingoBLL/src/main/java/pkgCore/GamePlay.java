@@ -30,6 +30,7 @@ public abstract class GamePlay {
 		while (it.hasNext()) {
 			Map.Entry pair = (Map.Entry) it.next();
 			Player p = (Player) pair.getValue();
+			hmGamePlayers.put(p.getPlayerID(), p);
 
 			//TODO: Add the player to the game
 		}
@@ -56,7 +57,7 @@ public abstract class GamePlay {
 		return hmGamePlayers;
 	}
 
-	private HashMap<GamePlayerHand, Hand> getHmGameHands() {
+	protected HashMap<GamePlayerHand, Hand> getHmGameHands() {
 		return hmGameHands;
 	}
 

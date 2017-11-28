@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.UUID;
 
+import pkgEnum.eBlackJackResult;
 import pkgException.DeckException;
 import pkgException.HandException;
 
@@ -12,7 +13,7 @@ public abstract class Hand {
 	private UUID HandID;
 	private ArrayList<Card> cards;
 	private HandScore HS;
-	private boolean bWinner = false;
+	private eBlackJackResult bWinner;
 
 	public Hand() {
 		this.HandID = UUID.randomUUID();
@@ -48,11 +49,11 @@ public abstract class Hand {
 		cards.add(c);
 	}
 
-	protected boolean isbWinner() {
+	protected eBlackJackResult isbWinner() {
 		return bWinner;
 	}
 
-	void setbWinner(boolean bWinner) {
+	void setbWinner(eBlackJackResult bWinner) {
 		this.bWinner = bWinner;
 	}
 	
